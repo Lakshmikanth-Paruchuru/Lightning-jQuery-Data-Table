@@ -1,0 +1,8 @@
+public class enhancedDatatable {
+    @AuraEnabled
+    public static list<Account> getDetails(){
+        list<Account> cc = [SELECT Name, Phone, Type, Industry, Rating FROM Account LIMIT 500];
+        return cc;
+    }
+
+}

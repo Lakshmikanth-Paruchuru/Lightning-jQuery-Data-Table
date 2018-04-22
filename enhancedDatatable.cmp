@@ -1,0 +1,31 @@
+<aura:component controller="enhancedDatatable" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <ltng:require styles="{! $Resource.	datatable + '/DataTables-1.10.16/media/css/jquery.dataTables.min.css'}" 
+                  scripts="{!join(',', $Resource.jquery224 , $Resource.datatable + '/DataTables-1.10.16/media/js/jquery.dataTables.min.js')
+                           }"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="data" type="Account[]"/>
+    <div>
+        <table id="tableId" class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Industry</th>
+                    <th scope="col">Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.data}" var="data">
+                    <tr>
+                        <td scope="col">{!data.Name}</td>
+                        <td scope="col">{!data.Phone}</td>
+                        <td scope="col">{!data.Type}</td>
+                        <td scope="col">{!data.Industry}</td>
+                        <td scope="col">{!data.Rating}</td>                       
+                    </tr>                   
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>
