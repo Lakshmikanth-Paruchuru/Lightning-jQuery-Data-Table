@@ -1,4 +1,4 @@
-# Lightning-Data-Service-Account
+# Lightning jQuery Data Table
 
 This component is provided with search lookup. 
 End user can type field values in the lookup for specific records.
