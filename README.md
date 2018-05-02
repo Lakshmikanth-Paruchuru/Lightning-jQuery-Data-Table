@@ -17,3 +17,7 @@ So we need to download it manually.
 Save the below link-  Right click-> Save as
 
 https://code.jquery.com/jquery-2.2.4.min.js
+
+
+
+**For Demo, have a look at GIF attached.**
